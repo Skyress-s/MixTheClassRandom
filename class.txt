@@ -23,7 +23,7 @@ Mathias
 Linus
 Sander
 Daniel
-Bjørn
+Bjoorn
 Tor
 Amund
 Markus
@@ -37,3 +37,4 @@ Andreas
 Christian
 Sara
 Anders
+Maisam

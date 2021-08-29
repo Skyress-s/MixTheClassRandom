@@ -49,7 +49,8 @@ int main()
         lArray.push_back(i);
     }
     
-    int n{};
+
+    //uses the lArray to select indexes to insert into namesIndexed list
     while (lArray.size() > 0)
     {
         int test[2];
@@ -78,8 +79,7 @@ int main()
     }
     
     //checks is names is odd or even, if odd, add skybert to the names list AND changes randomnameindexes[last][1] to point to skybert
-    if (randomNameIndexes.back()[1] == -10)
-    {
+    if (randomNameIndexes.back()[1] == -10){
         names.push_back("Skybert!");
         randomNameIndexes.back()[1] = names.size() -1;
     }
@@ -97,8 +97,7 @@ int main()
         
         xs = xs - names[x].size();
         string addx{};
-        for (int i = 0; i < xs; i++)
-        {
+        for (int i = 0; i < xs; i++){
             addx += " ";
         }
 
