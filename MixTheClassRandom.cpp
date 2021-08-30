@@ -21,7 +21,7 @@ vector<string> GetArrayOfNames(string _fileName) {
 
     string line{};
     ifstream namesFile{};
-    namesFile.open("class.txt");
+    namesFile.open(fileName);
     while (getline(namesFile, line))
     {
         names.push_back(line);
@@ -29,7 +29,17 @@ vector<string> GetArrayOfNames(string _fileName) {
     namesFile.close();
     
     return names;
-    
+}
+
+
+int GetMinSpacing(vector<string> _names) {
+    int _minSpacing{};
+    for (int i = 0; i < _names.size(); i++){
+        if (_names[i].length() > _minSpacing){
+            _minSpacing = _names[i].length();
+        }
+    }
+    return _minSpacing;
 }
 
 
@@ -84,6 +94,8 @@ int main()
         randomNameIndexes.back()[1] = names.size() -1;
     }
     
+    //gets the spacing
+    int minSpacing = GetMinSpacing(names) + 2;
 
 
     //outputh he indexes
@@ -93,9 +105,8 @@ int main()
         int x = randomNameIndexes[i][0];
         int y = randomNameIndexes[i][1];
         
-        int xs = 12;
         
-        xs = xs - names[x].size();
+        int xs = minSpacing - names[x].size();
         string addx{};
         for (int i = 0; i < xs; i++){
             addx += " ";
