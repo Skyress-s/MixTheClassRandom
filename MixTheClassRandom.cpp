@@ -1,6 +1,3 @@
-// MixTheClassRandom.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,10 +6,6 @@
 
 using namespace std;
 string fileName = "class.txt";
-
-
-
-
 
 vector<string> GetArrayOfNames(string _fileName) {
     //new logic using vectors
@@ -31,7 +24,6 @@ vector<string> GetArrayOfNames(string _fileName) {
     return names;
 }
 
-
 int GetMinSpacing(vector<string> _names) {
     int _minSpacing{};
     for (int i = 0; i < _names.size(); i++){
@@ -43,10 +35,25 @@ int GetMinSpacing(vector<string> _names) {
 }
 
 
-
 int main()
 {
+    //int a, b, c;
+    //a = time(0);
+    //for (int i = 0; i < 10000; i++)
+    //{
+    //    /*c = i * sin(cos(sqrt(time(0))));
+    //    cout << c;*/
+    //    cout << time(0);
+
+    //}
+    //b = time(0);
+
+    //cout << endl << endl << " Total time is: " << (b - a) << endl;
+
+
     srand(time(0));
+    cout << time(0) << endl;
+    
     vector<string> names = GetArrayOfNames(fileName);
     
     vector<vector<int>> randomNameIndexes{};
